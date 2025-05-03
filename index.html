@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breeze Lite – Roblox Executor</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a1a;
+      color: #f0f0f0;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    header, .container, footer {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation-delay: 0.2s;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #e84bc3;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: #2a2a2a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      animation-delay: 0.4s;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .section h2 {
+      color: #e84bc3;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .section p,
+    .section ul {
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .section ul li::before {
+      content: "✔️";
+      margin-right: 8px;
+      color: #9b59b6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #e84bc3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c43ca6;
+      transform: scale(1.05);
+    }
+
+    .faq {
+      background: #242424;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #444;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .faq-question {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      color: #e84bc3;
+      cursor: pointer;
+      padding: 10px 0;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: #f06ad0;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      opacity: 1;
+      padding-bottom: 10px;
+    }
+
+    .team-section {
+      background: #333;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .team-member {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .team-member h3 {
+      margin-top: 10px;
+      color: #e84bc3;
+    }
+
+    .team-member p {
+      color: #bbb;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 40px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      animation-delay: 0.6s;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 Breeze Lite</h1>
+    <p>A sleek, web-based Roblox executor – no key system required.</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>Why Breeze Lite?</h2>
+      <p>Breeze Lite is built for speed, simplicity, and power. Designed to help you script quickly without annoying popups or key systems.</p>
+    </div>
+
+    <div class="section">
+      <h2>Features</h2>
+      <ul>
+        <li>No key system – jump right in</li>
+        <li>Custom Monaco editor</li>
+        <li>Exclusive paid perks</li>
+        <li>Modern, responsive UI</li>
+        <li>Things may not be finished</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Meet the Team</h2>
+      <div class="team-section">
+        <div class="team-member">
+          <h3>Breeze</h3>
+          <p>Owner</p>
+        </div>
+        
+        <div class="team-member">
+          <h3>Jake</h3>
+          <p>Lead Developer</p>
+        </div>
+        <div class="team-member">
+          <h3>Dev</h3>
+          <p>Testze</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question">Is Breeze Lite free to use?</button>
+        <div class="faq-answer">Yes, Breeze Lite has a free version with optional paid perks.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do I need a key to use it?</button>
+        <div class="faq-answer">Nope! Breeze Lite is completely keyless.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is it safe?</button>
+        <div class="faq-answer">Breeze Lite is designed to be lightweight and safe. Use responsibly.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Join the Community</h2>
+      <p>Support, and updates directly from the Breeze team.</p>
+      <a href="https://discord.gg/nFGJZry5rn" target="_blank" class="btn">Join Our Discord</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Breeze Lite. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Trigger animations on page load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('header, .container, footer').forEach(el => {
+        el.style.opacity = '1';
+      });
+    });
+  </script>
+
+</body>
+</html>
